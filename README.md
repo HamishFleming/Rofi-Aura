@@ -1,4 +1,4 @@
 # Title
 
-![alt text](https://github.com/hamish/rofi-aura/blob/master/images/1.png?raw=true)
-![alt text](https://github.com/hamish/rofi-aura/blob/master/images/2.png?raw=true)
+![alt text](https://github.com/HamishFleming/Rofi-Aura/blob/master/images/1.png)
+![alt text](https://github.com/HamishFleming/Rofi-Aura/blob/master/images/2.png)
