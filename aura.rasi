@@ -1,0 +1,233 @@
+/**
+ * ROFI Color theme
+ * User: Vex
+ * Copyright: Hamish Fleming
+ */
+
+configuration {
+	font: "Inter Regular 12";
+	show-icons: false;
+	threads: 0;
+	scroll-method: 0;
+	disable-history: true;
+	window-thumbnail: false;
+}
+
+* {
+
+  transparent: #00000000;
+  --black: rgba(10,10,16,0.4980392156862745);
+  /* --black: #15141b; */
+  --white: #edecee;
+  --gray: #6d6d6d;
+  --purple: #a277ff;
+  --purple-fading: rgba(60,54,94,0.4980392156862745);
+  /* #3d375e7f; */
+  --green: #61ffca;
+  --orange: #ffca85;
+  --pink: #f694ff;
+  --blue: #82e2ff;
+  --red: 	#ff6767;
+
+  --background-color: var(--black);
+  --foreground-color: var(--white);
+  --muted-color: var(--gray);
+  --selection-color: var(--purple-fading);
+  --primary-color: var(--purple);
+  --secondary-color: var(--green);
+  --tertiary-color: var(--orange);
+  --quaternary-color: var(--pink);
+  --quinary-color: var(--blue);
+  --senary-color: var(--red);
+
+  --warning-color: var(--orange);
+  --success-color: var(--green);
+  --error-color: var(--red);
+
+  /* --black-soft: #15141b7f; */
+  --black-soft: rgba(20,20,26,0.4980392156862745);
+  --white-soft: #bdbdbd;
+  --gray-soft: #6d6d6d;
+  --purple-soft: #8464c6;
+  --purple-fading-soft: #3d375e7f;
+  --purple-fading-soft: rgba(60,54,94,0.4980392156862745);
+  --green-soft: #54c59f;
+  --orange-soft: #c7a06f;
+  --pink-soft: #c17ac8;
+  --blue-soft: #6cb2c7;
+  --red-soft: #c55858;
+
+  --background-soft-color: var(--black-soft);
+  --foreground-soft-color: var(--white-soft);
+  --muted-soft-color: var(--gray-soft);
+  --selection-soft-color: var(--purple-fading-soft);
+  --primary-soft-color: var(--purple-soft);
+  --secondary-soft-color: var(--green-soft);
+  --tertiary-soft-color: var(--orange-soft);
+  --quaternary-soft-color: var(--pink-soft);
+  --quinary-soft-color: var(--blue-soft);
+  --senary-soft-color: var(--red-soft);
+
+  --warning-soft-color: var(--orange-soft);
+  --success-soft-color: var(--green-soft);
+  --error-soft-color: var(--red-soft);
+}
+
+* {
+	/* Foreground */
+    input-foreground:		 @--secondary-color;
+    prompt-foreground:		 @--primary-color;
+    foreground:                  @--foreground-color;
+    lightfg:                     @--foreground-soft-color;
+    normal-foreground:           @foreground;
+    alternate-normal-foreground: @foreground;
+    alternate-normal-foreground: @lightfg;
+    urgent-foreground:           rgba ( 255, 129, 255, 100 % );
+    alternate-urgent-foreground: @urgent-foreground;
+    active-foreground:           @--primary-color;
+    /* active-foreground:           @--secondary-color; */
+    alternate-active-foreground: @active-foreground;
+    selected-normal-foreground: @--primary-color;
+    selected-normal-foreground: @active-foreground;
+    selected-active-foreground:  rgba ( 2, 20, 63, 100% );
+    selected-urgent-foreground:  rgba ( 2, 20, 63, 100 % );
+
+    background:                  @--background-color;
+    lightbg:                     @--background-soft-color;
+    background-color:            @background;
+    normal-background:           @background;
+    normal-background:           @transparent;
+    alternate-normal-background: @transparent;
+    /* @background; */
+    urgent-background:           rgba ( 0, 0, 208, 0 % );
+    alternate-urgent-background: rgba ( 0, 0, 0, 0 % );
+    active-background:           @background;
+    alternate-active-background: @active-background; /* rgba ( 61,55,94, 100% ); */
+    selected-normal-background:  @--selection-color; /* rgba (61,55,94,0.5); */
+    /* selected-normal-background:  @background; */
+    selected-active-background:  @--secondary-soft-color;
+    selected-urgent-background:  rgba ( 255, 129, 127, 100 % );
+
+    red:                         @--red;
+    blue:                        @--blue;
+
+    bordercolor:                 @--primary-color;
+    separatorcolor:              @--secondary-color;
+    /* separatorcolor:              rgba ( 162,119,255, 100 % ); */
+    border-color:                @bordercolor;
+    spacing:                     5;
+}
+
+window {
+    background-color: @background;
+    border:           1;
+    padding:          10;
+}
+mainbox {
+    border:  0;
+    padding: 5;
+}
+message {
+    border:       2px 0px 0px ;
+    border-color: @separatorcolor;
+    padding:      1px ;
+}
+textbox {
+    text-color: @search-foreground;
+}
+listview {
+    fixed-height: 0;
+    border:       1px 0px 0px ;
+    border-color: @separatorcolor;
+    spacing:      5px ;
+    scrollbar:    false;
+    padding:      10px 10px 0px ;
+}
+element {
+    border:  0;
+    padding: 1px ;
+    margin: 2px;
+}
+element-text {
+    padding:5px;
+    background-color: inherit;
+    text-color:       inherit;
+}
+element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+scrollbar {
+    width:        0px ;
+    border:       0;
+    handle-width: 0px ;
+    padding:      0;
+    background-color: @--;
+}
+mode-switcher {
+    border:       2px 0px 0px ;
+    border-color: @separatorcolor;
+}
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+inputbar {
+    spacing:    1;
+    text-color: @input-foreground;
+    padding:    10px ;
+}
+case-indicator {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+entry {
+    spacing:    0;
+    text-color: @input-foreground;
+}
+prompt, button{
+    spacing:    0;
+    text-color: @prompt-foreground;
+}
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @prompt-foreground;
+}
